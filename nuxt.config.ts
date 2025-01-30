@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   compatibilityDate: '2024-11-01',
   devtools: { enabled: true },
-  modules: ['nuxt-auth-utils'],
+  modules: ['nuxt-auth-utils', "@nuxthub/core"],
   runtimeConfig:{
     oauth: {
       github: {
@@ -10,5 +10,8 @@ export default defineNuxtConfig({
         clientSecret:""//ici aussi
       }
     }
+  },
+  hub: {
+    database: true,
   }
 })
